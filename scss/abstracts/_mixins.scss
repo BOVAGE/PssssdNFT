@@ -1,0 +1,19 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+@mixin logo-rotation-animation($time:16s) {
+    animation-name: rotation;
+    animation-timing-function: linear;
+    animation-duration: $time;
+    animation-iteration-count: infinite;
+}

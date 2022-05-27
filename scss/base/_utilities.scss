@@ -1,0 +1,26 @@
+.container {
+    padding: 40px 35px;
+
+    &--max {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &--bg {
+        background-color: $main-bg-color;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo--small {
+    width: 25px;
+    height: 25px;
+}
+
+.logo--big {
+    width: 170px;
+    height: 170px;
+}

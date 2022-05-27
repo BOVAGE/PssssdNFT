@@ -1,0 +1,473 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #eee3de;
+  overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+  color: #eee3de;
+}
+
+.container {
+  padding: 40px 35px;
+}
+
+.container--max {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.container--bg {
+  background-color: #222123;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo--small {
+  width: 25px;
+  height: 25px;
+}
+
+.logo--big {
+  width: 170px;
+  height: 170px;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes flipcard-animation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipcard-animation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes flipcard-neg-animation {
+  0% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes flipcard-neg-animation {
+  0% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+body {
+  font-family: "Relative";
+  font-size: 1rem;
+}
+
+.id-card {
+  min-width: 27.5rem;
+  max-width: 27.5rem;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #222123;
+  position: relative;
+}
+
+.id-card-side {
+  padding: 0.9rem 0;
+  border-radius: 15px;
+  border: 2px solid #222123;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.id-card-side--front {
+  background-color: #f8c3fb;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation-name: flipcard-animation;
+          animation-name: flipcard-animation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.id-card-side--front__head {
+  border-top: 1px solid #222123;
+  border-bottom: 1px solid #222123;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.id-card-side--front__head-text {
+  padding-left: 1.25rem;
+}
+
+.id-card-side--front__head-text > p {
+  font-size: 1.1rem;
+}
+
+.id-card-side--front__img {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #222123;
+}
+
+.id-card-side--front__img img {
+  height: 100%;
+}
+
+.id-card-side--front__middle {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.id-card-side--front__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.id-card-side--back {
+  background-color: #222123;
+  color: rgba(238, 238, 238, 0.76);
+  -webkit-animation-name: flipcard-neg-animation;
+          animation-name: flipcard-neg-animation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.id-card-side--back__middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.id-card-side--back__middle .logo--big {
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.id-card-side--back__footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.id-card-heading {
+  font-size: 1.5rem;
+}
+
+.id-card-heading--big {
+  font-size: 3.5rem;
+}
+
+.id-card-heading--center {
+  text-align: center;
+}
+
+.barcode__img {
+  width: 200px;
+}
+
+.logo-with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-left: auto;
+  border: 1px solid #222123;
+}
+
+.logo-with-text .logo-img {
+  border-right: 1px solid #222123;
+  padding: 0 0.5rem;
+}
+
+.logo-with-text img {
+  margin: auto 0;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url("../../asset/nav.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  font-size: 0.8rem;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-bar__logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.nav-bar__logo .logo {
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.nav-bar__title {
+  display: none;
+}
+
+.nav-bar__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-bar__info .red-light {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff6464;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px 3px #db8585;
+          box-shadow: 0px 0px 8px 3px #db8585;
+}
+
+.nav-bar__info-emergency {
+  word-spacing: 4px;
+}
+
+.nav-bar__info * {
+  padding-left: 1rem;
+}
+
+.nav-bar__info .bar-lines {
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+
+.header {
+  margin-top: -75px;
+  padding-top: 75px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.header .cut-across-img {
+  position: absolute;
+  -webkit-transform: scale(2.1);
+          transform: scale(2.1);
+  z-index: -1;
+}
+
+.header .cut-across-img--pink {
+  top: 75px;
+}
+
+.header .cut-across-img--green {
+  top: 38%;
+  z-index: 1;
+}
+
+.header .cut-across-img--orange {
+  top: 45%;
+}
+
+.header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.header-main__text {
+  padding: 40px 0 70px;
+  text-align: center;
+}
+
+.header-main__img {
+  overflow: hidden;
+  border-radius: 25px;
+  height: 400px;
+}
+
+.header-main__img-avatar {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  letter-spacing: 0px;
+  word-spacing: -5px;
+  line-height: 2;
+  font-family: "Bureau Grot Extra", sans-serif;
+}
+
+.main-heading--black {
+  color: #000;
+}
+
+.main-heading .superscript {
+  font-size: 0.9rem;
+  letter-spacing: -1px;
+  vertical-align: top;
+}
+/*# sourceMappingURL=main.css.map */
