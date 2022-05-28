@@ -470,4 +470,31 @@ body {
   letter-spacing: -1px;
   vertical-align: top;
 }
+
+.guide-faq {
+  color: #222123;
+}
+
+.grid-container--2cols {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.faqs .accordion {
+  border-bottom: 2px solid #f8c3fb;
+  padding: 1.25rem 0;
+}
+
+.faqs .accordion__question {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.faqs .accordion__answer {
+  font-weight: 400;
+  display: none;
+  padding-left: 1.25rem;
+}
 /*# sourceMappingURL=main.css.map */

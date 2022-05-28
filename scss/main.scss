@@ -128,3 +128,28 @@
         vertical-align: top;
     }
 }
+
+.guide-faq {
+    color: $main-bg-color;
+}
+
+.grid-container--2cols {
+    @include row;
+}
+
+.faqs {
+    .accordion {
+        border-bottom: 2px solid #f8c3fb;
+        padding: 1.25rem 0;
+        &__question {
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+
+        &__answer {
+            font-weight: 400;
+            display: none;
+            padding-left: 1.25rem;
+        }
+    }
+}

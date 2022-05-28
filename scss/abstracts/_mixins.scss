@@ -17,3 +17,8 @@
     animation-duration: $time;
     animation-iteration-count: infinite;
 }
+
+@mixin row($cols:1) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+}
