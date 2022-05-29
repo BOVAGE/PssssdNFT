@@ -71,16 +71,19 @@
         padding: 40px;
     }
     .header-main {
-        .header-main__img {
+        &__img {
             height: 100%;
         }
+
+        &__text {
+            text-align: center;
+        }
+
     }
 
     .main-heading--big {
         font-size: 4.5rem;
-        text-align: left;
         line-height: 1;
-        padding-bottom: 2rem;
     }
 }
 
@@ -88,24 +91,37 @@
     .container {
         padding: 40px;
     }
-    .header-main {
-        .header-main__img {
-            height: 100%;
+
+    .header {
+        .cut-across-img {            
+            &--pink {
+                z-index: 3;
+            }
         }
 
-        &__text {
-            justify-content: center;
-
-            p {
-                padding: 0 2rem;
+        &-main {
+            &__img {
+                height: 100%;
+            }
+    
+            &__text {
+                text-align: left;
+                justify-content: center;
+    
+                p {
+                    padding: 0 2rem;
+                }
             }
         }
     }
 
     .main-heading--big {
-        font-size: 4.5rem;
-        text-align: left;
-        line-height: 1;
         padding-bottom: 2rem;
+    }
+}
+
+@include respon-id-card {
+    .id-card {
+        min-width: 100%;
     }
 }

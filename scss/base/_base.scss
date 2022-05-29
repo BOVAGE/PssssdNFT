@@ -16,6 +16,12 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    -webkit-user-drag: none;
+    -o-user-drag: none;
+    -moz-user-drag: none;
+}
+
 a:link,
 a:visited {
     color: $main-text-color;

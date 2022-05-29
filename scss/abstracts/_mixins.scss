@@ -41,3 +41,9 @@
         @content;
     }
 }
+
+@mixin respon-id-card {
+    @media screen and (max-width:440px) {
+        @content;
+    }
+}
