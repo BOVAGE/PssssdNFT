@@ -18,6 +18,10 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    animation-name: width-grow-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 
     &__logo {
         width: 4rem;
@@ -60,19 +64,27 @@
     overflow: hidden;
 
     .cut-across-img {
+        max-width: 0;
         position: absolute;
         transform: scale(2.1);
         z-index: -1;
+        animation-name: width-grow-animation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
 
         &--pink {
             top: 75px;
+            animation-delay: 0.4s;
         }
         &--green {
             top: 38%;
             z-index: 1;
+            animation-delay: 1.6s;
         }
         &--orange {
             top: 45%;
+            animation-delay: 1s;
         }
     }
 }
@@ -132,7 +144,10 @@
 
 .faqs {
     .accordion {
-        border-bottom: 2px solid #f8c3fb;
+        &:not(:last-child){
+            border-bottom: 2px solid #f8c3fb;
+        }
+
         padding: 1.25rem 0;
         &__question {
             cursor: pointer;
@@ -196,3 +211,4 @@
     color: $main-bg-color;
     background-color: #f8c3fb;
 }
+@import "base/responsive";

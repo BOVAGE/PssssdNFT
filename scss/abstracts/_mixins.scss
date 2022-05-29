@@ -21,4 +21,23 @@
 @mixin row($cols:1) {
     display: grid;
     grid-template-columns: repeat($cols, 1fr);
+    gap: 20px;
+}
+
+@mixin media-md {
+    @media screen and (min-width:768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width:1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width:1300px) {
+        @content;
+    }
 }

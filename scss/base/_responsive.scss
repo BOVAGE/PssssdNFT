@@ -1,0 +1,111 @@
+@include media-md {
+    .nav-bar__title {
+        display: block;
+    }
+
+    .header {
+        .cut-across-img {
+            z-index: -1;
+            transform: scale(1.5);
+            
+            &--orange {
+                top: unset;
+                bottom: 2%;
+            }
+
+            &--green {
+                top: unset;
+                bottom: 0;
+            }
+        }
+    }
+
+    .header-main {
+        @include flex-row;
+
+        &__text {
+            flex-basis: 50%;
+            @include flex-column;
+            justify-content: space-around;
+
+            p {
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .grid-container--2cols {
+        @include row(2);
+
+        > * {
+            border: 3px solid $pink-color;
+        }
+    }
+
+    .faq-part {
+        grid-row-start: 1; 
+    }
+
+    .accordion {
+        &:first-child {
+            border-top: 2px solid #f8c3fb;
+        } 
+    }
+
+    .comic-gallery {
+        @include row(2);
+    }
+
+    .container {
+        padding: 40px 1rem;
+    }
+
+    .main-heading {
+        text-align: center;
+    }
+}
+
+@include media-lg {
+    .container {
+        padding: 40px;
+    }
+    .header-main {
+        .header-main__img {
+            height: 100%;
+        }
+    }
+
+    .main-heading--big {
+        font-size: 4.5rem;
+        text-align: left;
+        line-height: 1;
+        padding-bottom: 2rem;
+    }
+}
+
+@include media-xl {
+    .container {
+        padding: 40px;
+    }
+    .header-main {
+        .header-main__img {
+            height: 100%;
+        }
+
+        &__text {
+            justify-content: center;
+
+            p {
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    .main-heading--big {
+        font-size: 4.5rem;
+        text-align: left;
+        line-height: 1;
+        padding-bottom: 2rem;
+    }
+}

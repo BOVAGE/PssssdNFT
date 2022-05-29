@@ -23,6 +23,15 @@ a:visited {
   color: #eee3de;
 }
 
+ul {
+  list-style: none;
+  padding: 0 0.5rem;
+}
+
+li {
+  padding: 1.25rem 0;
+}
+
 footer {
   text-align: center;
   color: #eee3de;
@@ -138,6 +147,60 @@ img {
   100% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes width-grow-animation {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@keyframes width-grow-animation {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+@-webkit-keyframes bg-size-animation {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes bg-size-animation {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@-webkit-keyframes pop-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -369,6 +432,14 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  -webkit-animation-name: width-grow-animation;
+          animation-name: width-grow-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .nav-bar__logo {
@@ -428,23 +499,38 @@ body {
 }
 
 .header .cut-across-img {
+  max-width: 0;
   position: absolute;
   -webkit-transform: scale(2.1);
           transform: scale(2.1);
   z-index: -1;
+  -webkit-animation-name: width-grow-animation;
+          animation-name: width-grow-animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .header .cut-across-img--pink {
   top: 75px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .header .cut-across-img--green {
   top: 38%;
   z-index: 1;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .header .cut-across-img--orange {
   top: 45%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .header-main {
@@ -504,11 +590,15 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
 }
 
 .faqs .accordion {
-  border-bottom: 2px solid #f8c3fb;
   padding: 1.25rem 0;
+}
+
+.faqs .accordion:not(:last-child) {
+  border-bottom: 2px solid #f8c3fb;
 }
 
 .faqs .accordion__question {
@@ -539,6 +629,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
   gap: 30px;
 }
 
@@ -579,5 +670,125 @@ body {
 #about {
   color: #222123;
   background-color: #f8c3fb;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar__title {
+    display: block;
+  }
+  .header .cut-across-img {
+    z-index: -1;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .header .cut-across-img--orange {
+    top: unset;
+    bottom: 2%;
+  }
+  .header .cut-across-img--green {
+    top: unset;
+    bottom: 0;
+  }
+  .header-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-main__text {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header-main__text p {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .grid-container--2cols {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .grid-container--2cols > * {
+    border: 3px solid #f8c3fb;
+  }
+  .faq-part {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .accordion:first-child {
+    border-top: 2px solid #f8c3fb;
+  }
+  .comic-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .container {
+    padding: 40px 1rem;
+  }
+  .main-heading {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+  .header-main .header-main__img {
+    height: 100%;
+  }
+  .main-heading--big {
+    font-size: 4.5rem;
+    text-align: left;
+    line-height: 1;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    padding: 40px;
+  }
+  .header-main .header-main__img {
+    height: 100%;
+  }
+  .header-main__text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-main__text p {
+    padding: 0 2rem;
+  }
+  .main-heading--big {
+    font-size: 4.5rem;
+    text-align: left;
+    line-height: 1;
+    padding-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -21,6 +21,15 @@ a:visited {
     color: $main-text-color;
 }
 
+ul {
+    list-style: none;
+    padding: 0 0.5rem;
+}
+
+li {
+    padding: 1.25rem 0;
+}
+
 footer {
     text-align: center;
     color: $main-text-color;
