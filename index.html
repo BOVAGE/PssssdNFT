@@ -7,6 +7,7 @@
     <meta name="description" content="My Pssssdstory">
     <meta name="author" content="">
     <meta name="keyword" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
     <link rel="stylesheet" href="dist/css/main.css">
     <title>MyPssssdStory by Jae4pf</title>
 </head>
@@ -61,51 +62,44 @@
             COMIC GALLERY
         </h2>
 
-        <div class="grid-3-cols">
-            <div class="col col--1">
-                <figure>
+        <div class="comic-gallery">
+            <a href="asset/scene1.jpg">
+                <figure class="comic">
+                    <img class="comic-image" src="asset/scene1.jpg" alt="Scene 1">
+                    <figcaption>Scene 1</figcaption>
+                </figure>
+            </a>
+            
+            <a href="asset/scene2.jpg">
+                <figure class="comic">
+                    <img class="comic-image" src="asset/scene2.jpg" alt="Scene 1">
+                    <figcaption>Scene 2</figcaption>
+                </figure>
+            </a>
+    
+            <a href="asset/scene3.jpg">
+                <figure class="comic">
+                    <img class="comic-image" src="asset/scene3.jpg" alt="Scene 1">
+                    <figcaption>Scene 3</figcaption>
+                </figure>
+            </a>
 
-                    <figcaption></figcaption>
+            <a href="asset/scene4.jpg">
+                <figure class="comic">
+                    <img class="comic-image" src="asset/scene4.jpg" alt="Scene 1">
+                    <figcaption>Scene 4</figcaption>
                 </figure>
-            </div>
-            <div class="col col--1">
-                <figure>
-                    
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div class="col col--1">
-                <figure>
-                    
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div class="col col--1">
-                <figure>
-                    
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div class="col col--1">
-                <figure>
-                    
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div class="col col--1">
-                <figure>
-                    
-                    <figcaption></figcaption>
-                </figure>
-            </div>
+            </a>
         </div>
     </section>
 
     <!-- team section  -->
-    <section id="team" class="team container container--bg">
-        <h2 class="main-heading">PSSD TEAM</h2>
+    <section id="team" class="team container">
+        <h2 class="main-heading main-heading--black">PSSD TEAM</h2>
         <div class="team-main container--max">
-
+            <div class="team-triangle">
+                <img src="asset/team.png" alt="Team Triangle">
+            </div>
         </div>
     </section>
 
@@ -343,5 +337,9 @@
     </section>
 
     <script src="dist/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        lightGallery(document.querySelector('.comic-gallery'));
+    </script>
 </body>
 </html>

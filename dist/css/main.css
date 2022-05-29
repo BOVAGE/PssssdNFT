@@ -9,6 +9,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -496,5 +497,51 @@ body {
   font-weight: 400;
   display: none;
   padding-left: 1.25rem;
+}
+
+.team-triangle {
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+}
+
+.comic-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.comic {
+  position: relative;
+}
+
+.comic .comic-image {
+  width: 100%;
+  height: 100%;
+}
+
+.comic .comic-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+.comic figcaption {
+  color: #222123;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.comic:hover figcaption {
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */
