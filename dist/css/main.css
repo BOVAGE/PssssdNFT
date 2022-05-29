@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@400;700&display=swap");
 *,
 *::after,
 *::before {
@@ -19,6 +20,11 @@ body {
 
 a:link,
 a:visited {
+  color: #eee3de;
+}
+
+footer {
+  text-align: center;
   color: #eee3de;
 }
 
@@ -47,6 +53,26 @@ img {
 .logo--big {
   width: 170px;
   height: 170px;
+}
+
+.light {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.light--red {
+  background-color: #ff6464;
+  -webkit-box-shadow: 0px 0px 8px 3px #db8585;
+          box-shadow: 0px 0px 8px 3px #db8585;
+}
+
+.light--green {
+  background-color: #64ff8b;
+  -webkit-box-shadow: 0px 0px 8px 3px #678a70d2;
+          box-shadow: 0px 0px 8px 3px #678a70d2;
+  margin-right: 0.5rem;
 }
 
 @-webkit-keyframes rotation {
@@ -116,7 +142,7 @@ img {
 }
 
 body {
-  font-family: "Relative";
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
 }
 
@@ -138,6 +164,8 @@ body {
   height: 100%;
   -webkit-transition: all 1s;
   transition: all 1s;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .id-card-side--front {
@@ -269,11 +297,14 @@ body {
 }
 
 .id-card-heading {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-top: 10px;
 }
 
 .id-card-heading--big {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding-top: 0;
 }
 
 .id-card-heading--center {
@@ -375,15 +406,6 @@ body {
           justify-content: space-between;
 }
 
-.nav-bar__info .red-light {
-  width: 1rem;
-  height: 1rem;
-  background-color: #ff6464;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 8px 3px #db8585;
-          box-shadow: 0px 0px 8px 3px #db8585;
-}
-
 .nav-bar__info-emergency {
   word-spacing: 4px;
 }
@@ -457,9 +479,10 @@ body {
 .main-heading {
   font-size: 2.5rem;
   letter-spacing: 0px;
-  word-spacing: -5px;
+  word-spacing: -1px;
   line-height: 2;
-  font-family: "Bureau Grot Extra", sans-serif;
+  font-family: "Acme", sans-serif;
+  font-weight: 700;
 }
 
 .main-heading--black {
@@ -497,6 +520,10 @@ body {
   font-weight: 400;
   display: none;
   padding-left: 1.25rem;
+}
+
+.faqs .accordion__answer a {
+  color: blue;
 }
 
 .team-triangle {
@@ -543,5 +570,14 @@ body {
 
 .comic:hover figcaption {
   visibility: visible;
+}
+
+.card {
+  padding: 1.25rem 0;
+}
+
+#about {
+  color: #222123;
+  background-color: #f8c3fb;
 }
 /*# sourceMappingURL=main.css.map */

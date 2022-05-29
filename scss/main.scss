@@ -36,14 +36,6 @@
     &__info {
         @include flex-row;
 
-        .red-light {
-            width: 1rem;
-            height: 1rem;
-            background-color:#ff6464;
-            border-radius: 50%;
-            box-shadow: 0px 0px 8px 3px rgb(219, 133, 133);
-        }
-
         &-emergency {
             word-spacing: 4px;
         }
@@ -110,9 +102,10 @@
 .main-heading {
     font-size: 2.5rem;
     letter-spacing: 0px;
-    word-spacing: -5px;
+    word-spacing: -1px;
     line-height: 2;
     font-family: $heading-font-family;
+    font-weight: 700;
 
     &--black {
         color: #000;
@@ -150,6 +143,10 @@
             font-weight: 400;
             display: none;
             padding-left: 1.25rem;
+
+            a {
+                color: blue;
+            }
         }
     }
 }
@@ -190,4 +187,12 @@
         visibility: visible;
     }
 }
-    
+
+.card {
+    padding: 1.25rem 0; 
+}
+
+#about {
+    color: $main-bg-color;
+    background-color: #f8c3fb;
+}
