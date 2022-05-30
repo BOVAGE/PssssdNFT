@@ -217,4 +217,14 @@
     color: $main-bg-color;
     background-color: #f8c3fb;
 }
+
+.shoutout {
+    &__card {
+        transform: skew(10deg) !important;
+        border: 2px solid red;
+        padding: 1.25rem;
+        margin: 1rem 0;
+    }
+}
+
 @import "base/responsive";

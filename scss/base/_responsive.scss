@@ -1,3 +1,35 @@
+@include respond-cut-across-img {
+    .header {
+        &-main.container {
+            padding: 1.2rem;
+        }
+        .cut-across-img--orange {
+            bottom: 10%;
+            top: unset;
+        }
+    }
+}
+
+@include respond-id-card {
+    .id-card {
+        min-width: 100%;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .superscript {
+        display: none;
+    }
+
+    .nav-bar__info {
+        &-emergency {
+            display: none;
+        }
+    }
+}
+
 @include media-md {
     .nav-bar__title {
         display: block;
@@ -117,11 +149,5 @@
 
     .main-heading--big {
         padding-bottom: 2rem;
-    }
-}
-
-@include respon-id-card {
-    .id-card {
-        min-width: 100%;
     }
 }

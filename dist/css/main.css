@@ -682,6 +682,39 @@ body {
   background-color: #f8c3fb;
 }
 
+.shoutout__card {
+  -webkit-transform: skew(10deg) !important;
+          transform: skew(10deg) !important;
+  border: 2px solid red;
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 340px) {
+  .header-main.container {
+    padding: 1.2rem;
+  }
+  .header .cut-across-img--orange {
+    bottom: 10%;
+    top: unset;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .id-card {
+    min-width: 100%;
+  }
+  html {
+    font-size: 13px;
+  }
+  .superscript {
+    display: none;
+  }
+  .nav-bar__info-emergency {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar__title {
     display: block;
@@ -801,12 +834,6 @@ body {
   }
   .main-heading--big {
     padding-bottom: 2rem;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .id-card {
-    min-width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

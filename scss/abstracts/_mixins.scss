@@ -24,6 +24,18 @@
     gap: 20px;
 }
 
+@mixin respond-id-card {
+    @media screen and (max-width:440px) {
+        @content;
+    }
+}
+
+@mixin respond-cut-across-img {
+    @media screen and (max-width:340px) {
+        @content;
+    }
+}
+
 @mixin media-md {
     @media screen and (min-width:768px) {
         @content;
@@ -38,12 +50,6 @@
 
 @mixin media-xl {
     @media screen and (min-width:1300px) {
-        @content;
-    }
-}
-
-@mixin respon-id-card {
-    @media screen and (max-width:440px) {
         @content;
     }
 }

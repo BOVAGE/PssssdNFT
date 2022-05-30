@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <meta name="keyword" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="dist/css/main.css">
     <title>MyPssssdStory by Jae4pf</title>
 </head>
@@ -37,7 +38,7 @@
         <img class="cut-across-img cut-across-img--orange" src="asset/outbreak-orange.svg" alt="outbreak-orange">
 
         <div class="header-main container container--max">
-            <div class="header-main__text">
+            <div data-aos="zoom-in" data-aos-delay="1300" class="header-main__text">
                 <h1 class="main-heading main-heading--big">
                     MY PSSSSD STORY<sup class="superscript">COMIC</sup>
                 </h1>
@@ -51,7 +52,7 @@
             </div>
 
             <div class="header-main__img">
-                <img class="header-main__img-avatar" src="asset/longtongue.gif" alt="Long tongue">
+                <img data-aos="zoom-in" data-aos-delay="1000" class="header-main__img-avatar" src="asset/longtongue.gif" alt="Long tongue">
             </div>
         </div>
     </header>
@@ -285,46 +286,54 @@
     </section>
 
     <!-- Shout out section  -->
-    <section id="shoutout" class="container container--bg container--max">
+    <section id="shoutout" class="shoutout container container--bg container--max">
         <h2 class="main-heading">POSSE SHOUTOUT</h2>
         <ul>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Shoutout to Jarn, Fiesta, Bravo, Derek, Youis, Lossie and the other posse OGs 
                 for their unwavering commitment towards the community
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Thanks to Aleska Camur for making custom pfps for me and several other posse members,
                 it was a really selfless gesture. Really hoping he makes the clinical trials
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Thanks to Miss Purple of the Shimmy gang for helping me and a lot of other posse
                 design Future test subject cards. Congrats to her on making the clinal trials as well
                 <pre><3</pre>
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Thanks to Milad and Woodii for bringing possetivity to the community by rendering
                 3d posse membership cards for me as well as lots of other posse family.
                 Rendering isn’t an easy task. Their level of self-sacrifice is unmatched.
                 It took them lots of time to offer a value of this pedigree for FREE… Really
                 hoping they get selected for the clinical trials soon.
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Shout out to our wonderful mods Gigi, Luumi and Lostboy, they are real
                 community leaders, appreciate the fact they try their best to make
                 everyone feel included…They’re so humble and I have nothing but love and respect for them.
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Shoutout to the AFRIPSSSD community, it’s so comfortable relating with you guys,
                 feels just like home. I love you all my fellow African brothers & sisters.
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Thanks to Tom and Joe for spearheading this wonderful project.
                 You guys have set the standards for what a real web3 community
                 should look like. Despite being founders with obviously busy schedules,
                 you still create time to interact with members of your community.
                 I have high admiration for you sers.
             </li>
-            <li>
+            <li class="shoutout__card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
                 Final thanks goes to every wonderful human I’ve met during the course of
                 this journey; I’d cherish you all for time to come.
             </li>
@@ -337,8 +346,10 @@
 
     <script src="dist/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         lightGallery(document.querySelector('.comic-gallery'));
+        AOS.init();
     </script>
 </body>
 </html>
