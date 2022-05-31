@@ -221,7 +221,7 @@
 .shoutout {
     &__card {
         transform: skew(10deg) !important;
-        border: 2px solid red;
+        border: 2px solid $pink-color;
         padding: 1.25rem;
         margin: 1rem 0;
     }

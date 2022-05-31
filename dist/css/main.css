@@ -685,7 +685,7 @@ body {
 .shoutout__card {
   -webkit-transform: skew(10deg) !important;
           transform: skew(10deg) !important;
-  border: 2px solid red;
+  border: 2px solid #f8c3fb;
   padding: 1.25rem;
   margin: 1rem 0;
 }
