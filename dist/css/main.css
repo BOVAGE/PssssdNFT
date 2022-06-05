@@ -256,6 +256,8 @@ body {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .id-card-side--front__head {
@@ -325,6 +327,8 @@ body {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .id-card-side--back__middle {

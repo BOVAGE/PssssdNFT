@@ -36,6 +36,7 @@
         animation-delay: 2s;     
         animation-timing-function: ease-in-out; 
         animation-fill-mode: forwards;
+        animation-direction: alternate;
 
         &__head {
             border-top: 1px solid $main-bg-color;
@@ -83,6 +84,7 @@
         animation-delay: 2s;
         animation-timing-function: ease-in-out; 
         animation-fill-mode: forwards;
+        animation-direction: alternate;
         
 
         &__middle {
